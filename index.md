@@ -50,7 +50,7 @@ Hi! My name is [Your Full Name].
 
 
 <br>
-
+    <i class="fa-solid fa-pencil"></i>
 <!-- Contact Section -->
 ### Get in Touch
 
