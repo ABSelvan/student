@@ -42,7 +42,7 @@ Hi! My name is [Your Full Name].
 <a href="{{site.baseurl}}/snake" class="button small" style="background-color: #663bf4ff">
     Snake Game
 </a>
-<a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
+<a href="{{site.baseurl}}/turtle" class="button large" style="background-color: #2A7DB1">
     <span style="color: #000000">Turtle</span>
 </a>
 <button>VOTE</button> 
@@ -50,7 +50,7 @@ Hi! My name is [Your Full Name].
 
 
 <br>
-    <i class="fa-solid fa-pencil"></i>
+
 <!-- Contact Section -->
 ### Get in Touch
 
