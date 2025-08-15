@@ -39,13 +39,14 @@ Hi! My name is [Your Full Name].
 
 ### Class Progress
 
-<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #6b4bd3ff">
+<a href="{{site.baseurl}}/snake" class="button small" style="background-color: #663bf4ff">
     Snake Game
 </a>
 <a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
     <span style="color: #000000">Turtle</span>
 </a>
-
+<button>VOTE</button>
+</a>
 <br>
 
 <!-- Contact Section -->
