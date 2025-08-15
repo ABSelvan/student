@@ -45,8 +45,10 @@ Hi! My name is [Your Full Name].
 <a href="{{site.baseurl}}/turtle" class="button small" style="background-color: #2A7DB1">
     <span style="color: #000000">Turtle</span>
 </a>
-<button>VOTE</button>
-</a>
+<button>VOTE</button> 
+    <span style="color: #bb1414ff">VOTE</span>
+
+
 <br>
 
 <!-- Contact Section -->
