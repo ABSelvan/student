@@ -1,8 +1,8 @@
 ---
 layout: base
 title: Background with Object
-description: Use JavaScript to have an in motion background.
-sprite: images/platformer/sprites/flying-ufo.png
+description: Use JavaScript to have an in motion background.   //this is the moving background in the screen
+sprite: images/platformer/sprites/flying-ufo.png  //this is the initial moving object in the center of the screen 
 background: images/platformer/backgrounds/alien_planet1.jpg
 permalink: /background
 ---
@@ -24,7 +24,7 @@ permalink: /background
   };
   spriteImg.onload = function() {
     imagesLoaded++;
-    startGameWorld();
+    startGameWorld();  // game world, where everything lives
   };
 
   function startGameWorld() {
@@ -110,5 +110,5 @@ permalink: /background
     }
 
     const world = new GameWorld(backgroundImg, spriteImg);
-    world.start();
+    world.start();  
   }
