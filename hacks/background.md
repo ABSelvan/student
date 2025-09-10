@@ -3,7 +3,7 @@ layout: base
 title: Background with Object
 description: Use JavaScript to have an in motion background.   //this is the moving background in the screen
 sprite: images/platformer/sprites/flying-ufo.png  //this is the initial moving object in the center of the screen 
-background: images/platformer/backgrounds/alien_planet1.jpg
+background: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaryCgQGaOlkfPfq_1xHPLN94uj4aDD2Xw2Q&s
 permalink: /background
 ---
 
