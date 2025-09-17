@@ -15,6 +15,7 @@ Hi! My name is John.
 | Scrummer     | Avantika | github.com/avantika/student         | downstream (fork)     | student   |
 | Scrummer     | Aadit    | github.com/aaadit/student           | downstream (fork)     | student   |
 
+<a href="{{site.baseurl}}/setup-blog/">Setup Blog</a>
 
 ## Links to Learning
 
