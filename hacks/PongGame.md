@@ -2,7 +2,7 @@
 layout: post
 title: 🏓 Complete Pong Game Code Implementation
 description: To operate, use WS & IK for right and left paddles respectively
-permalink: /custompong
+permalink: /ponggame
 menu: nav/tools_setup.html
 toc: True
 comments: True

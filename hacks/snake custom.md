@@ -1,7 +1,7 @@
 ---
 layout: base
 title: Snake Game
-permalink: /snakecus
+permalink: /custom-snake
 ---
 
 <style>
