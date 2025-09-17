@@ -6,6 +6,7 @@ permalink: /snakecus
 
 <style>
 
+   <style>
     body{
     }
     .wrap{
@@ -71,6 +72,9 @@ permalink: /snakecus
 <h2>Snake</h2>
 <div class="container">
     <p class="fs-4">Score: <span id="score_value">0</span></p>
+    <!-- Timer Display -->
+    <p class="fs-4">Time Left: <span id="timer">02:29</span></p>
+
     <div class="container bg-secondary" style="text-align:center;">
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
@@ -143,12 +147,37 @@ permalink: /snakecus
         let food = {x: 0, y: 0};
         let score;
         let wall;
+
+        /* Timer Control */
+        /////////////////////////////////////////////////////////////
+        let timerInterval;
+        let totalTime = 149; // 2 minutes 29 seconds in seconds
+
+        function startTimer(){
+            clearInterval(timerInterval);
+            let remaining = totalTime;
+
+            function updateDisplay(){
+                let minutes = Math.floor(remaining / 60);
+                let seconds = remaining % 60;
+                document.getElementById("timer").textContent =
+                    `${String(minutes).padStart(2,'0')}:${String(seconds).padStart(2,'0')}`;
+            }
+
+            updateDisplay();
+            timerInterval = setInterval(function(){
+                remaining--;
+                updateDisplay();
+
+                if(remaining < 0){
+                    clearInterval(timerInterval);
+                    showScreen(SCREEN_GAME_OVER);
+                }
+            }, 1000);
+        }
+
         /* Display Control */
         /////////////////////////////////////////////////////////////
-        // 0 for the game
-        // 1 for the main menu
-        // 2 for the settings screen
-        // 3 for the game over screen
         let showScreen = function(screen_opt){
             SCREEN = screen_opt;
             switch(screen_opt){
@@ -172,6 +201,7 @@ permalink: /snakecus
                     break;
             }
         }
+
         /* Actions and Events  */
         /////////////////////////////////////////////////////////////
         window.onload = function(){
@@ -210,6 +240,7 @@ permalink: /snakecus
                     newGame();
             }, true);
         }
+
         /* Snake is on the Go (Driver Function)  */
         /////////////////////////////////////////////////////////////
         let mainLoop = function(){
@@ -274,11 +305,10 @@ permalink: /snakecus
             }
             // Paint food
             activeDot(food.x, food.y);
-            // Debug
-            //document.getElementById("debug").innerHTML = snake_dir + " " + snake_next_dir + " " + snake[0].x + " " + snake[0].y;
-            // Recursive call after speed delay, déjà vu
+            // Recursive call after speed delay
             setTimeout(mainLoop, snake_speed);
         }
+
         /* New Game setup */
         /////////////////////////////////////////////////////////////
         let newGame = function(){
@@ -298,8 +328,11 @@ permalink: /snakecus
             canvas.onkeydown = function(evt) {
                 changeDir(evt.keyCode);
             }
+            // start timer
+            startTimer();
             mainLoop();
         }
+
         /* Key Inputs and Actions */
         /////////////////////////////////////////////////////////////
         let changeDir = function(key){
@@ -323,12 +356,14 @@ permalink: /snakecus
                     break;
             }
         }
+
         /* Dot for Food or Snake part */
         /////////////////////////////////////////////////////////////
         let activeDot = function(x, y){
             ctx.fillStyle = "#FFFFFF";
             ctx.fillRect(x * BLOCK, y * BLOCK, BLOCK, BLOCK);
         }
+
         /* Random food placement */
         /////////////////////////////////////////////////////////////
         let addFood = function(){
@@ -340,24 +375,25 @@ permalink: /snakecus
                 }
             }
         }
+
         /* Collision Detection */
         /////////////////////////////////////////////////////////////
         let checkBlock = function(x, y, _x, _y){
             return (x === _x && y === _y);
         }
+
         /* Update Score */
         /////////////////////////////////////////////////////////////
         let altScore = function(score_val){
             ele_score.innerHTML = String(score_val);
         }
+
         /////////////////////////////////////////////////////////////
         // Change the snake speed...
-        // 150 = slow
-        // 100 = normal
-        // 50 = fast
         let setSnakeSpeed = function(speed_value){
             snake_speed = speed_value;
         }
+
         /////////////////////////////////////////////////////////////
         let setWall = function(wall_value){
             wall = wall_value;
@@ -366,3 +402,4 @@ permalink: /snakecus
         }
     })();
 </script>
+
