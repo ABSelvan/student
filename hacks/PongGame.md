@@ -60,7 +60,7 @@ const restartBtn = document.getElementById('restartBtn');
 function initBall() {
   ballX = canvas.width/2;
   ballY = canvas.height/2;
-  ballSpeedX = Math.random() > 0.5 ? 5 : -5;
+  ballSpeedX = Math.random() > 0.5 ? 2 : -5;
   ballSpeedY = (Math.random() * 4) - 2;
 }
 
@@ -85,7 +85,7 @@ function drawText(text, x, y, color="white") {
 
 function draw() {
   // background
-  drawRect(0, 0, canvas.width, canvas.height, "#000");
+  drawRect(0, 0, canvas.width, canvas.height, "#f0302dff");
 
   // paddles
   drawRect(0, player1Y, paddleWidth, paddleHeight, "#fff");
