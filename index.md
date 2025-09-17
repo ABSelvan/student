@@ -47,9 +47,10 @@ Hi! My name is John.
     <span style="color: #000000">Turtle</span>
 </a>
 <button>VOTE</button> 
-    <span style="color: #bb1414ff">VOTE</span>
-
-
+<button>Animated Background</button>
+<button>Calculator</button>
+<button>Atari Pong Hack</button>
+<button>Custom Snake Hack</button>
 <br>
 
 <!-- Contact Section -->
