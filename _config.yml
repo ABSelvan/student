@@ -3,7 +3,7 @@ description: "Class of 2026"
 owner_name: John Mortensen
 github_username: ABSelvan
 github_repo: "student" 
-baseurl: "/Student" 
+baseurl: "/student" 
 future: true
 remote_theme: jekyll/minima
 minima:
