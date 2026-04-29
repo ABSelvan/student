@@ -5,7 +5,7 @@ permalink: /bitlesson
 title: AP CSP 4.1 | Bit Rate, Bandwidth, & Latency
 description: Understanding network performance metrics that impact data transmission speed and communication quality. Essential for understanding how data moves across the internet.
 categories: ['Lesson']
-author: Perry Say, Adhav Nadar
+author: Perry Say, Adhav Selvan
 ---
 
 # AP CSP 4.1: Bit Rate, Bandwidth, & Latency
